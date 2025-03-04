@@ -1,3 +1,4 @@
+import { MessageCirclePlus } from "lucide-react";
 import Link from "next/link";
 
 const Navbar = () => {
@@ -20,8 +21,13 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="text-sm text-gray-600">
-          <a href="/contact" className="underline hover:no-underline">
-            Contact
+          <a
+            href="/contact"
+            className={
+              "border-1 border-black text-black p-2 rounded-md flex items-center gap-1 no-underline hover:opacity-90 hover:bg-gray-100"
+            }
+          >
+            Contact <MessageCirclePlus className="h-4 w-4" />
           </a>
         </div>
       </div>

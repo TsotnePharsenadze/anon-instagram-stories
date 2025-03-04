@@ -23,7 +23,10 @@ const Footer = () => {
             </a>
           ))}
         </div>
-        <p className="mt-2">© 2025 InstaViewer.</p>
+        <p className="mt-2">
+          © 2025 InstaViewer made by{" "}
+          <span className="font-black">Tsotne Pharsenadze</span>
+        </p>
       </div>
     </footer>
   );
