@@ -24,8 +24,8 @@ const Footer = () => {
           ))}
         </div>
         <p className="mt-2">
-          © 2025 InstaViewer made by{" "}
-          <span className="font-black">Tsotne Pharsenadze</span>
+          © 2025 InstaViewer. Mini-project by{" "}
+          <span className="font-black">TP</span>
         </p>
       </div>
     </footer>
