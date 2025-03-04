@@ -127,3 +127,32 @@
     @apply bg-background text-foreground;
   }
 }
+
+@media screen and (max-width: 590px) {
+  body {
+    padding: 0px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .customEditForContactUsCardWrapper {
+    padding: 2rem 0.5rem 2rem 0.5rem !important;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .customEditForContactUsCard {
+    padding: 0.1rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .customEditForContactUsCardFooter {
+    display: flex;
+    flex-direction: column !important;
+    gap: 12px;
+  }
+  .customEditForContactUsCardFooter button {
+    width: 100%;
+  }
+}

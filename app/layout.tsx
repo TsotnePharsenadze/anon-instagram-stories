@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
+import { Toaster } from "@/components/ui/sonner";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +33,7 @@ export default function RootLayout({
         <div className="h-full bg-gradient-to-br from-purple-100 to-pink-100">
           <Navbar />
           {children}
-
+          <Toaster />
           <Footer />
         </div>
       </body>
