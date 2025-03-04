@@ -52,7 +52,11 @@ const InstagramViewer: React.FC = () => {
         generalData: items1[0],
       });
     } catch (err) {
-      setError("Failed to fetch profile data. Please try again.");
+      setError(
+        "Failed to fetch profile data. @" +
+          username +
+          " either doesnt exists or is private account"
+      );
       console.error("API Error:", err);
     } finally {
       setIsLoading(false);
@@ -127,11 +131,6 @@ const InstagramViewer: React.FC = () => {
                 <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 mb-3">
                   <h2 className="text-xl font-bold">@{profile.username}</h2>
                   <div className="flex space-x-2">
-                    {profile.is_private && (
-                      <span className="bg-gray-200 text-gray-700 text-sm font-medium px-3 py-1.5 rounded-lg flex items-center">
-                        <Lock size={14} className="mr-1" /> Private
-                      </span>
-                    )}
                     {profile.is_verified && (
                       <span className="bg-blue-100 text-blue-700 text-sm font-medium px-3 py-1.5 rounded-lg flex items-center">
                         ✓ Verified
@@ -183,17 +182,6 @@ const InstagramViewer: React.FC = () => {
             </div>
           </div>
 
-          {profile.is_private && (
-            <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-6 text-center">
-              <div className="flex justify-center mb-2">
-                <Lock size={24} className="text-gray-500" />
-              </div>
-              <h3 className="font-medium text-gray-700 mb-1">
-                This Account is Private
-              </h3>
-            </div>
-          )}
-
           {!profile.is_private && (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -243,6 +231,7 @@ const InstagramViewer: React.FC = () => {
           <div className="text-xs text-gray-500 mt-2 mb-6 text-center"></div>
         </div>
       )}
+
       {isLoading && (
         <div className="w-full bg-white rounded-xl shadow-lg p-6 mb-10 flex items-center justify-center">
           <Loading text="Fetching profile..." />
