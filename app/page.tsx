@@ -1,15 +1,12 @@
 "use client";
 
 import React, { useState, FormEvent, ChangeEvent } from "react";
-import { Shield, Eye, Lock, Activity } from "lucide-react";
+import { Lock } from "lucide-react";
 import { ApifyClient } from "apify-client";
 import Image from "next/image";
 
 import Header from "@/components/Header";
-
-const client = new ApifyClient({
-  token: process.env.NEXT_PUBLIC_APIFY_API_TOKEN,
-});
+import About from "@/components/About";
 
 const InstagramViewer: React.FC = () => {
   const [username, setUsername] = useState<string>("");
@@ -63,6 +60,15 @@ const InstagramViewer: React.FC = () => {
     if (username.trim() === "") {
       setError("Please enter an Instagram username");
       return;
+    } else if (
+      username.indexOf("https://") != -1 ||
+      username.indexOf("instagram.com") != -1
+    ) {
+      setUsername(
+        username
+          .split("instagram.com/")[1]
+          .slice(0, username.split("instagram.com/")[1].length)
+      );
     }
     fetchInstagramProfile(username);
   };
@@ -189,6 +195,7 @@ const InstagramViewer: React.FC = () => {
           <div className="text-xs text-gray-500 mt-2 mb-6 text-center"></div>
         </div>
       )}
+      <About />
     </div>
   );
 };
