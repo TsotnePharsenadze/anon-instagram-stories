@@ -14,12 +14,10 @@ import {
   IoPersonOutline,
   IoInformationCircle,
 } from "react-icons/io5";
-import { useRouter } from "next/navigation";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useState } from "react";
 import sendContact from "@/actions/sendContact";
 import { toast } from "sonner";
-import BackButton from "@/components/BackButton";
 
 type FormDataType = {
   name: string;

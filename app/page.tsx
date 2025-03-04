@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, FormEvent, ChangeEvent } from "react";
-import { ImageIcon, Lock } from "lucide-react";
+import { ImageIcon } from "lucide-react";
 import Image from "next/image";
 
 import Header from "@/components/Header";

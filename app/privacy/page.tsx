@@ -1,4 +1,3 @@
-import BackButton from "@/components/BackButton";
 import { PrivacyPolicy } from "@/data";
 
 const PrivacyPage = () => {

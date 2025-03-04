@@ -37,7 +37,7 @@ const Story = ({ id, image, takenAt, alt }: StoryProps) => {
             <div className="relative w-[80%] mx-auto pt-[100%]">
               <Image
                 src={image}
-                alt={alt}
+                alt={alt ?? `Fallback alt ${id}`}
                 fill
                 className="absolute top-0 left-0 object-cover hover:scale-105 transition-transform duration-300"
               />

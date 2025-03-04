@@ -1,4 +1,3 @@
-import BackButton from "@/components/BackButton";
 import { TermsOfServiceData } from "@/data";
 
 const TermsOfServicePage = () => {
