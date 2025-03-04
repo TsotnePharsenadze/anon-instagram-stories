@@ -12,6 +12,7 @@ const Navbar = () => {
                 <div className="w-8 h-8 bg-gradient-to-tr from-purple-600 to-pink-500 rounded-lg"></div>
                 <span className="font-bold text-xl">InstaViewer</span>
               </div>
+              <h1 className="hidden">Made by Tsotne Pharsenadze</h1>
               <div
                 className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent
                   translate-x-[-150%] rotate-45 group-hover:translate-x-[150%] 

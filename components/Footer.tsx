@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-white py-4 mt-auto">
       <div className="max-w-6xl mx-auto px-4 text-center text-sm text-gray-500">
-        <div className="flex gap-x-2 items-center justify-center text-black ">
+        <div className="flex gap-y-2 sm:gap-x-2 flex-col sm:flex-row items-center justify-center text-black ">
           {FooterHrefs.map((link, index) => (
             <a
               key={index}

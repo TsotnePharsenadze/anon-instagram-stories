@@ -1,8 +1,10 @@
+import BackButton from "@/components/BackButton";
 import { TermsOfServiceData } from "@/data";
 
 const TermsOfServicePage = () => {
   return (
     <div className="flex flex-col items-center p-6 max-w-4xl mx-auto text-gray-800 my-12 bg-white rounded-md">
+      <h1 className="hidden">Made by Tsotne Pharsenadze</h1>
       <h1 className="text-3xl font-bold mb-4">Terms of Service</h1>
       <p className="text-sm text-gray-600 mb-6 text-center">
         Please read this document carefully. It contains important information

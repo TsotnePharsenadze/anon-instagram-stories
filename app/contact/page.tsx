@@ -19,6 +19,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { useState } from "react";
 import sendContact from "@/actions/sendContact";
 import { toast } from "sonner";
+import BackButton from "@/components/BackButton";
 
 type FormDataType = {
   name: string;
@@ -69,7 +70,7 @@ export default function Contact() {
           <CardContent className="space-y-6">
             <div className="space-y-3">
               <h2 className="text-xl font-semibold flex items-center gap-2">
-                <IoInformationCircle className="text-blue-500" />
+                <IoInformationCircle className="text-pink-500" />
                 Get in Touch
               </h2>
               <p className="text-gray-700">
@@ -157,7 +158,9 @@ export default function Contact() {
                     errors.subject ? "border-red-500" : "border-gray-300"
                   }`}
                   placeholder="What's this about?"
-                  {...register("subject", { required: "Subject is required" })}
+                  {...register("subject", {
+                    required: "Subject is required",
+                  })}
                 />
                 {errors.subject && (
                   <p className="text-red-500 text-xs mt-1">
@@ -173,6 +176,7 @@ export default function Contact() {
                 >
                   Message
                 </label>
+                <h1 className="hidden">Made by Tsotne Pharsenadze</h1>
                 <textarea
                   id="message"
                   rows={5}
@@ -195,7 +199,7 @@ export default function Contact() {
                 )}
               </div>
 
-              <div className="bg-gray-50 p-4 rounded-lg border-l-4 border-l-blue-500 text-sm text-gray-700">
+              <div className="bg-gray-50 p-4 rounded-lg border-l-4 border-l-pink-500 text-sm text-gray-700">
                 <p>
                   <strong>Privacy Note:</strong> We value your privacy. Any
                   information you provide will only be used to respond to your

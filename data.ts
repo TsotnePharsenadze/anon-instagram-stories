@@ -72,7 +72,7 @@ export const PrivacyPolicy = [
   {
     title: "Contact Information",
     content:
-      "To exercise your rights, please send your request to <a href='mailto:support@InstaViewer.net' className='text-blue-500 underline'>support@InstaViewer.net</a>.",
+      "To exercise your rights, please send your request from: ",
   },
 ];
 

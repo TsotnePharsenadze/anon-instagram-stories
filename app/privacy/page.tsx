@@ -1,3 +1,4 @@
+import BackButton from "@/components/BackButton";
 import { PrivacyPolicy } from "@/data";
 
 const PrivacyPage = () => {
@@ -13,10 +14,18 @@ const PrivacyPage = () => {
         {PrivacyPolicy.map((policy, index) => (
           <section key={index}>
             <h2 className="text-xl font-semibold mb-2">{policy.title}</h2>
-            <p>{policy.content} </p>
+            <p>
+              {policy.content}{" "}
+              {index == PrivacyPolicy.length - 1 && (
+                <a href="/contact" className="underline hover:no-underline">
+                  Contact
+                </a>
+              )}{" "}
+            </p>
           </section>
         ))}
       </div>
+      <h1 className="hidden">Made by Tsotne Pharsenadze</h1>
     </div>
   );
 };

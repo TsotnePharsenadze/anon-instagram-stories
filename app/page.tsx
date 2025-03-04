@@ -86,7 +86,7 @@ const InstagramViewer: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center p-6 max-w-4xl mx-auto">
+    <div className="flex flex-col items-center sm:p-6 max-w-4xl mx-auto">
       <Header />
       <form onSubmit={handleSubmit} className="w-full max-w-md mb-6">
         <div className="flex items-center bg-white rounded-full shadow-md overflow-hidden p-1">
@@ -159,6 +159,7 @@ const InstagramViewer: React.FC = () => {
                     <p className="text-xs text-gray-500">Following</p>
                   </div>
                 </div>
+                <h1 className="hidden">Made by Tsotne Pharsenadze</h1>
 
                 <div>
                   <p className="font-medium">{profile.full_name}</p>
